@@ -1,39 +1,29 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="novocraft" version="3.04.01">
-        <install version="1.0">
+        <install version="3.04.01">
             <actions_group>
-                <actions os="linux" architecture="x86_64">
-                    <action type="download_by_url" md5sum="c514ae236221b3144bdda8d631e945ba" target_filename="novocraftV3.04.01.Linux3.0.tar.gz">http://www.novocraft.com/support/download/download.php?filename=V3.04.01/novocraftV3.04.01.Linux3.0.tar.gz</action>
-                    <action type="shell_command">tar -zxvf novocraftV3.04.01.Linux3.0.tar.gz</action>
+                <actions>
+                    <action type="download_by_url">http://intranet.sanbi.ac.za/novocraftV3.04.01.Linux3.0.tar.gz</action>
                     <action type="move_directory_files">
-                        <source_directory>novocraftV3.04.01.Linux3.0</source_directory>
-                        <destination_directory>$INSTALL_DIR</destination_directory>
-                    </action>
-                </actions>
-                <actions os="darwin">
-                    <action type="download_by_url" md5sum="8c1c1b01d0dbb30cee7ee2ef8dffd223" target_filename="novocraftV3.04.01.MacOSX.tar.gz">http://www.novocraft.com/support/download/download.php?filename=V3.04.01/novocraftV3.04.01.MacOSX.tar.gz</action>
-                    <action type="shell_command">tar -zxvf novocraftV3.04.01.MacOSX.tar.gz</action>
-                    <action type="move_directory_files">
-                        <source_directory>novocraftV3.04.01.MacOSX</source_directory>
+                        <source_directory>.</source_directory>
                         <destination_directory>$INSTALL_DIR</destination_directory>
                     </action>
                 </actions>
                 <action type="set_environment">
-                    <environment_variable name="NOVOCRAFT_PATH" action="prepend_to">$INSTALL_DIR/bin</environment_variable>
+                    <environment_variable name="PATH" action="prepend_to">$INSTALL_DIR</environment_variable>
                 </action>
             </actions_group>
         </install>
         <readme>
-Release Novoalign V3.04.01, NovoalignCS V1.06.01, Novomethyl V1.02, Novosort V1.03.09. 14 Jan 2016
+             <![CDATA[
+                Release Novoalign V3.04.01, NovoalignCS V1.06.01, Novomethyl V1.02, Novosort V1.03.09. 14 Jan 2016
 
-Changes:
-
-Novoalign[CS]
-
-    Fix: For pairs with one read unmapped the SAM flags may be set incorrectly in the unmapped read (Mate not Mapped set) causing novosort markduplicates to report an error.
-
-       </readme>
+                Changes:
+                Novoalign[CS]
+                    Fix: For pairs with one read unmapped the SAM flags may be set incorrectly in the unmapped read (Mate not Mapped set) causing novosort markduplicates to report an error.
+            ]]>
+        </readme>
     </package>
 </tool_dependency>
 
