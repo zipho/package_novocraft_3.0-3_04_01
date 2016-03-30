@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tool_dependency>
     <package name="novocraft" version="3.04.01">
-        <install version="3.04.01">
+        <install version="1.0">
             <actions_group>
                 <actions>
                     <action type="download_by_url">http://intranet.sanbi.ac.za/novocraftV3.04.01.Linux3.0.tar.gz</action>
